@@ -5,6 +5,8 @@ const APIKey = "15a686f297cf37379980ae5889d59df9";
 
 
 async function getApi() {
+  const coordUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
+  
   const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${APIKey}`;
   console.log("testing");
 console.log(queryURL)
