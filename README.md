@@ -18,6 +18,6 @@ No special skills needed
 No special instructions needed
 This is link of repository: https://github.com/NarSulEsz/WheatherPredictor
 
-This is link of web-site itself: https://narsulesz.github.io/task-list/
+This is link of web-site itself: https://narsulesz.github.io/WheatherPredictor/
 
-Screenshot without dialog widget: https://github.com/NarSulEsz/task-list/blob/main/assets/scrinshots/Screenshot%202024-06-10%20202209.png
+Screenshot : https://github.com/NarSulEsz/WheatherPredictor/blob/main/assets/Screenshot%20WeatherPredictor.png
