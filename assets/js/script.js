@@ -7,7 +7,7 @@ const APIKey = "15a686f297cf37379980ae5889d59df9";
 function getApi(event) {
   event.preventDefault();
 
-  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${APIKey}`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${APIKey}&units=imperial`;
     fetch(queryURL)
     .then(function (response) {
       return response.json();
@@ -15,21 +15,13 @@ function getApi(event) {
     .then(function (data) {
       //Using console.log to examine the data
       console.log(data);
-      for (let i = 0; i < data.length; i++) {
-        //Creating a "ul" element and a "li" element
-        const listOfCities = document.createElement('ul');
-        const currentWeather = document.createElement('li');
+      document.getElementById('city').textContent = data.name;
+      document.getElementById('date').textContent = new Date(data.dt * 1000).toLocaleDateString();
+      document.getElementById('temp').textContent = data.main.temp;
+      document.getElementById('wind').textContent = data.wind.speed;
+      document.getElementById('humidity').textContent = data.main.humidity;
 
-        //Setting the text of the h3 element and p element.
-        listOfCities.textContent = data[i].login;
-        currentWeather.textContent = data[i].html_url;
-
-        //Appending the dynamically generated html to the div associated with the id="users"
-        //Append will attach the element as the bottom most child.
-        citiesContainer.appendChild(listOfCities);
-        listOfCities.appendChild(currentWeather);
-        return citiesContainer;
-      }
+      
     });
 
 }
